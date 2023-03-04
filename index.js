@@ -4,7 +4,10 @@ const port = 3000;
 
 
 app.get ("/zodiaco/:fechanacimiento",(req,res)=>{
-    res.send(req.params.fechanacimiento)
+   let fecha = parseInt(req.params.fechanacimiento)
+   console.log(typeof parseInt(fecha));
+    res.send(req.params.fechanacimiento);
+
 });
 app.get ("/chino/:fechachino",(req,res)=>{
     res.send(req.params.fechachino)
